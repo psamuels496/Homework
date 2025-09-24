@@ -1,0 +1,29 @@
+How to create an EC2 Instance
+
+1. login to [[AWS]] console under IAM account
+2. type [[EC2]] in the search bar then click on it
+3. scroll along the lefthand side of the screen and look for [[security group]]
+4. click create security group
+5. name the security group
+6. set up [[inbound rules]]
+7. for inbound rules set the "sever" at "http" 
+8. the set the "source" to "IPV4"
+9. for [[outbound rules]] never touch. (LEAVE IT ALONE)
+10. click Create security group
+11. go to github and go to Theo's script and copy raw file
+12. go to "Instance" and click " launch Instance"
+13. name the web sever
+14. leave "AMI" at default and leave "instance type" at default 
+15. go to "key pair" and select " proceed without key pair"
+16. Scroll down to Network Settings and click "select existing Security group"
+17. select the security group you created
+18. open up "Advance details" and scroll all the way down to "user data"
+19. Paste the script that was copied from theo's github
+20. Then click "launch Instance"
+21. Click Instance ID located within the green box
+22. Copy the "public DNS"
+23. open up a new tab and type "http://"  then paste the rest of the copied public DNS the press enter
+24. Your EC2 instance should show up on the screen and be up and running where the webserver can be accessed.
+How to Tear down and dismantle EC2 Instances:
+- when you are finished go to "Instances" right click the instance and then click "terminate Instance"
+- You can also go to the existing security groups and right click those too to delete them 
